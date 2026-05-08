@@ -20,7 +20,7 @@
 		"automation"
 	],
 	"author": {
-		"name": "ali-shan",
+		"name": "Ali Shan",
 		"email": "aliishann806@gmail.com"
 	},
 	"repository": {
@@ -28,7 +28,7 @@
 		"url": "git+https://github.com/AliShan85/n8n-nodes-zai.git"
 	},
 	"scripts": {
-		"build": "n8n-node build",
+		"build": "node scripts/build.js",
 		"build:watch": "tsc --watch",
 		"dev": "n8n-node dev",
 		"lint": "n8n-node lint",
@@ -52,14 +52,15 @@
 	},
 	"devDependencies": {
 		"@n8n/node-cli": "*",
+		"esbuild": "^0.28.0",
 		"eslint": "9.39.4",
 		"prettier": "3.8.1",
 		"release-it": "19.2.4",
 		"typescript": "5.9.3"
 	},
 	"peerDependencies": {
-		"n8n-workflow": "*",
-		"@n8n/ai-node-sdk": ">=0.10.0"
+		"@n8n/ai-node-sdk": ">=0.10.0",
+		"n8n-workflow": "*"
 	},
 	"publishConfig": {
 		"access": "public"
