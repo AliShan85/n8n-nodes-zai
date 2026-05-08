@@ -230,11 +230,9 @@ export class ZaiChatModel extends BaseChatModel<ZaiChatModelConfig> {
                             : undefined,
                     };
                 }
-            } catch (error) {
+            } catch {
                 // Skip invalid JSON from SSE stream
-                if (!(error instanceof SyntaxError)) {
-                    throw error;
-                }
+                continue;
             }
         }
     }
